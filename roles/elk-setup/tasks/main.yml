@@ -1,0 +1,23 @@
+---
+# tasks file for elk-setup
+
+- name: Setting SELinux to permissive
+  selinux: policy=targeted state=permissive
+
+- name: Install Java 8
+  include: java.yml
+
+- name: Install Elasticsearch
+  include: elasticsearch.yml
+
+- name: Install Kibana
+  include: kibana.yml
+
+- name: Install Nginx
+  include: nginx.yml
+
+- name: Install Logstash
+  include: logstash.yml
+
+- name: Load Kibana dashboards
+  include: dashboard.yml 
