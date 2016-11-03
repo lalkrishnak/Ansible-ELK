@@ -1,5 +1,5 @@
 ---
-- name: Setting up AWS Infrastucture
+- name: Setting up ELK Components
   hosts: localhost
   connection: local
   gather_facts: no
